@@ -1,0 +1,1107 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap');
+:root{
+    --main-color:#43A5BE;
+    --main-color-01:white;
+    --main-color-02:black;
+}
+
+*{border:0px solid red;}
+
+html, body{
+    margin: 0px;
+    padding: 0px;
+    
+}
+ 
+body{
+	height: 100vh !important;
+    width: 100%;
+}
+
+html {
+	height: 100% !important;
+    width: 100%;  
+    overflow-x:hidden !important;
+}
+
+html, body, header, .view {height: 100%;}
+.preload { width:100px;
+    height: 100px;
+    position: fixed;
+    top: 50%;
+    left: 50%;}
+.preload {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20em!important; 
+    height: 20rem!important;
+    margin-left: -10rem;
+    margin-top: -10rem;
+    cursor : wait;
+  }
+  
+
+  #site-content, #nav-content
+  {visibility:hidden;
+}
+
+
+  .title-part-2,  .title-part-3, .titre-principal, .titre-chevron h1, h2, h3.btn-text, h4, h5, h6, p, .navbar-text, a.nav-link, a.dropdown-item,  li,  span.d-block{font-family: montserrat, arial, sans-serif;}
+
+.navbar{
+  background-color: rgba(67, 165, 190,0.8);
+  z-index:1000!important;
+}
+
+
+
+
+.top-nav-collapse{background-color:var(--main-color-02);}
+
+.fa-github{color:var(--main-color-02);}
+
+  #content:after{
+    content:"Mobile Very Small Screen"
+   }
+   header { max-width:100%; }
+
+   @media only screen and (max-width: 992px){
+
+    header { width:992px; }
+
+}
+
+#site-content {
+    min-height: 100%;
+    min-height: 100vh;
+    position: relative;
+    background:var(--main-color-01);
+    z-index: 1;
+  /*  visibility:hidden; */
+ 
+  }
+
+nav{
+    z-index:500 !important;
+   visibility:visible; 
+}
+
+@media only screen and (max-width: 760px)
+{
+#indic-device { display: none; }
+}
+
+.btn-suite{color: var(--main-color);}
+
+#hexag-menu-top {
+    border-bottom: 9px solid var(--main-color);
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+}
+
+#hexag-menu-middle {
+    margin-top: -3px;
+    width: 30px;
+    height: 15px;
+    background-color: var(--main-color);
+}
+
+#hexag-menu-bottom {
+    border-top: 9px solid var(--main-color);
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+}
+
+.navbar-toggler:focus, .navbar-toggler:active {
+    outline: none;
+    box-shadow: none;
+}
+
+.navbar-toggler span {
+    display: block;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255,0.5);
+    height: 3px;
+    width: 15px;
+    margin-top: 3px;
+    margin-bottom: 2px;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    opacity: 1;
+}
+
+.dropdown-item:hover{
+    background-color:rgb(57, 180, 200) !important;
+    background-color:rgba(67, 165, 190,0.1) !important;
+    
+}
+.dropdown-item:active{
+    background-color:rgb(67, 165, 190) !important;
+    background-color:rgba(67, 165, 190,0.3) !important;
+}
+
+.dropdown-divider{color:rgb(57, 180, 200) !important;}
+
+.nav-link, .dropdown-item, h1 {text-transform: uppercase;}
+
+.dropdown-item{color:var(--main-color)!important;}
+  
+/*------- PARALLAX -------*/
+
+
+  #parallax-container {
+      z-index:100;
+    /*background-color: white;*/
+
+    border: none;
+    position: relative;
+    /*overflow: hidden;*/
+    width: 100%;
+    height: 100vh;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    backface-visibility: hidden;
+
+  }
+
+  .parallax-wrapper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top:50%;
+    left: 0%;
+    transform-origin: 50% 50%;
+    transform: translate3d(0px, 0px, 0px);
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+
+  
+  }
+  
+  
+  .parallax-layer {
+
+    transform-style: preserve-3d;
+    backface-visibility: hidden !important;
+    position: absolute!important;
+    display: block!important;  
+
+    /*transition: transform .1s linear;*/
+    
+  }
+ 
+  .parallax-layer.is-out {
+    transform: translate3d(0, 0, 0) !important;
+    transition: transform .4s ease-out!important;
+
+  }
+
+  
+
+
+
+/* .figure1 {
+    z-index:200;
+    background: url('../images/cosmo_pyramids576.jpg') no-repeat top ;
+    background-size: cover;
+    width: 100%!important;
+    height: 100%!important;
+    bottom: 0%;
+    left: 0;
+    
+  }
+  
+  .figure2 {
+      z-index:300;
+    background: #CC1B49;
+    background: url('../images/logo-JG-white-opacity.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 40%;
+    height: 40%;
+    bottom: 45%;
+    left: 25%;
+  }
+ 
+
+  
+.figure3  {
+    z-index:250 !important;
+  
+    background: url('../images/white-sunlight576.png') no-repeat center !important;
+    background-repeat: no-repeat;
+    bottom: 33%;
+    left: 0;
+    width: 92%;
+    height: 92%;
+  
+    background-size: cover;
+    opacity:0.7;
+   
+}
+*/
+  
+
+
+  .parallax-layer.is-out {
+    transform: translate3d(0, 0, 0) !important;
+    transition: transform .4s ease-out;
+  }
+  .white{
+    background-color: var(--main-color-01);
+    z-index:20!important;
+    
+  }
+  .parallax{
+    position:relative;
+     background: url("./assets/img/sea-sky-horizon.jpg") no-repeat center center;
+     background:url("https://media.giphy.com/media/7GHRDluBmx9O8/giphy.gif") no-repeat center center fixed;
+     background:url("http://media.giphy.com/media/Cf4qsIEIrFs6Q/giphy.gif") no-repeat center center fixed;
+     background-attachment: scroll !important;
+     -webkit-background-size: cover;
+     -moz-background-size: cover;
+    -o-background-size: cover;
+     background-size: cover!important;
+     height: 50vw;
+     width: 100%;
+     overflow:hidden;
+  } 
+
+
+/* // Extra small devices (portrait phones, less than 576px) */
+/* // No media query for `xs` since this is the default in Bootstrap */
+
+
+.logo {
+    background: url('./assets/img/logo-JG-w.svg') no-repeat center  !important;
+    margin:0 0!important;
+    top:23vh;
+    width:40%;
+    height:40%;
+    opacity: 1;
+    background-repeat: no-repeat !important;
+    background-size: contain !important;
+    z-index: 1000!important;
+    opacity:0.8;
+    overflow:hidden;
+}
+
+.under-logo  {
+    z-index:250;
+    margin:0 0!important;
+    background: url('./assets/img/white-sunlight992.png') no-repeat center !important;
+    background-repeat: no-repeat;
+    bottom: 0%;
+    left: 0;
+    width: 70%;
+    height: 70%;
+  
+    background-size: cover;
+    opacity:1;
+    overflow:hidden;
+   
+}
+
+
+  
+.phrase {
+    position:absolute;
+  
+    left: 0 !important;
+     right:0 !important; 
+    z-index:500;
+    padding-top:15vh;
+    font-size: 12.5vw;
+    font-weight: 100;
+    letter-spacing: 0.5vw;
+    color: var(--main-color-01);
+    
+
+}
+
+.logo-jg {
+    z-index:1000;
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    width:100%;
+    height:101vh;
+
+ 
+  background: url('./assets/img/cosmo_pyramids576.jpg') no-repeat top ;
+  background-size: cover;
+  
+
+}
+
+#logo-jg {
+   margin-top:40%;
+  width: 50%!important;
+  height: 50%!important;
+
+
+}
+
+
+
+
+
+.fa-angle-down{
+    color:white;
+    margin-top:-5vh;
+  }
+
+  .fa-angle-down{
+    color:black!important;
+    margin-top:-5vh;
+  }
+
+
+
+  /*.titre-principal, .titre-chevron {
+    z-index: 1000;
+  
+    position:absolute;
+    text-transform: uppercase;
+    font-size:2vw;
+    
+   
+    font-weight: 700;
+    color: rgba(255,255,255,0.8);
+    line-height:4vh;
+    text-shadow: 0 0 6px rgba(255,255,255,0.92), 0 0 30px rgba(255,255,255,0.34), 0 0 12px rgba(67,165,190,0.52), 0 0 21px rgba(67,165,190,0.92), 0 0 34px rgba(67,165,190,0.78), 0 0 54px rgba(67,165,190,0.92);
+   
+  
+    left: 0;
+     right:0;  
+  
+    padding-top:-5vh;
+
+}
+*/
+
+.titre-chevron{
+  margin-top:10%;
+  padding-top:0;
+  transform: translateY(-50%);
+}
+
+  .fa-chevron-down:hover{
+    font-size:8em!important;
+    color:var(--main-color-01)!important;
+}
+
+
+.fa-chevron-down{
+    z-index:9999;
+    
+     
+    padding:6px!important;
+    /*font-weight:bolder;*/
+    /*border: 2px solid transparent;*/
+    /*border-radius: 4px;*/
+    border:none !important;
+    color:var(--main-color-01);
+    transition: all 0.3s ease-in 0s;
+   margin-top:-20%!important;
+
+}
+
+
+
+h1{
+    margin-top:0.1em!important;
+    font-weight:900!important;
+    font-size: 1.8em !important;
+    letter-spacing: -0.03em !important;  
+}
+
+.trait{
+    margin-left:auto;
+    margin-right:auto;
+    background-color: var(--main-color);
+    height: 12px;
+    width: 28%;
+}
+.title-part-2{
+    line-height:1em !important;
+}
+
+.title-part-2, .titre-principal, .titre-chevron{
+    font-weight:bold;
+    font-size: 1.8em !important;
+    letter-spacing: -0.03em !important;
+}
+
+p, h5, a.nav-link, a.dropdown-item, .title-part-3, h4, li{
+    font-weight:regular;
+}
+
+h2, span.d-block{font-weight: thin;}
+
+h6{  
+    font-weight: bold;
+    font-size: 1.2em !important;
+}
+
+.fa-circle{
+    font-size:0.9em !important;
+    color:var(--main-color);
+}
+
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size:6em;
+    font-weight:800;
+    color:black
+  }
+
+  #code{
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -70%);
+  }
+  #centered-phone {
+    position: absolute;
+   left:50%;
+   transform: translate(-50%, -50%);
+   top:50%;
+
+
+
+    font-size:5.5vw;
+    font-weight:800;
+    background-color: rgba(255,255,255,0.7);
+    padding-left:3vw;
+    padding-right:3vw;
+    color:var(--main-color-02);
+    -webkit-text-stroke-color:var(--main-color-02);
+    text-decoration: none;
+    border:1vw solid var(--main-color-02);
+  
+
+  }
+
+  .flip_H{
+    display: inline-block; 
+    transform: scale(-1, 1) !important;
+    -moz-transform: scale(-1, 1);
+    -webkit-transform: scale(-1, 1);
+    -o-transform: scale(-1, 1);
+    -ms-transform: scale(-1, 1);
+  }
+
+.display-3{
+    font-size:2.3em!important;
+}
+
+
+
+
+
+@media only screen and (max-width: 992px) {
+  .navbar {background-color:var(--main-color-02);
+}
+}
+
+/* // Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+
+  
+  #content:after{
+    content:"Mobile Small Screen"
+   }
+ 
+    .logo-jg {
+        z-index:1000;
+        position:absolute;
+        left:0;
+        right:0;
+        top:0;
+        height:100vw!important;
+        margin-top:-6%;
+    
+     
+      background: url('./assets/img/cosmo_pyramids760.jpg') no-repeat top ;
+      background-size: cover;
+      
+    
+    }
+    
+    #logo-jg {
+      top:60% !important;
+      padding-top:5% !important;
+     
+      width: 60%!important;
+      height: 60%!important;
+    
+    
+    
+    }
+
+    .display-3{
+        font-size:4em!important;
+    }
+
+   
+   
+
+    .under-logo{
+        top:20vw;
+        left:0vw;
+        width:100%;
+        height:100%;
+        opacity:0.4;
+        z-index:100 !important;
+    }
+    .phrase {  
+        margin-top:-2%;        
+        font-size: 9.5vw;
+        font-weight: 100;
+        letter-spacing: 0.2vw;
+    }
+    .titre-principal {
+  
+        left: 0;
+         right:0;  
+         margin-top:0; 
+         font-size: 2.8vw;
+        padding-top:-50%;
+    
+    }
+
+
+  .titre-chevron{
+  
+   margin-top:-50vh!important;
+    padding-top:0;
+    transform: translateY(-50%);
+
+  }
+
+    .fa-chevron-down{
+        top:20%!important;
+        font-size:8vw!important;
+    }
+ 
+    h1{
+        margin-left:-1em!important;
+        font-weight:600 !important;
+        font-size: 1.4em !important;
+        letter-spacing: -0.03em !important;
+    }
+
+    .trait{
+        margin-left:-1.2em!important;
+        background-color: var(--main-color);
+        height: 16px;
+        width: 50%;
+    }
+
+
+    h1{
+        margin-left:-0.35em!important;
+        margin-bottom:0!important;
+        font-size: 3em !important;
+        font-weight:900 !important;
+        letter-spacing: -0.03em !important;      
+    }
+     .trait{   
+   
+        margin-left:-1.1em!important;
+        height: 12px;
+        width:50%;
+    }
+
+    .centered {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size:4em;
+        font-weight:800;
+        color:var(--main-color-02);
+      }
+
+  
+}
+
+/* // Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  #content:after{
+    content:"Tablet Screen"
+   }
+    .logo-jg {
+        z-index:1000;
+        position:absolute;
+        left:0;
+        right:0;
+        
+        height:auto!important;
+      background: url('./assets/img/cosmo_pyramids992.jpg') no-repeat top ;
+      background-size: cover;
+    }
+    #logo-jg {
+       margin-top:20%;
+      width: 45%!important;
+      height: 45%!important;
+    }
+  .under-logo{
+    top:18vw;
+    left:1vw;
+    width:100%;
+    height:100%;
+    opacity:0.4;
+    z-index:100 !important;
+ }
+
+    .phrase {   
+        padding-top:8vh;
+       left: 0;
+        right:0;      
+        color: var(--main-color-01);
+        font-size:12vw;
+        font-weight: 100;
+        letter-spacing: 0.3vw;
+    }
+
+  
+    /*
+    .titre-principal {
+        z-index: 1000;
+        position:absolute;
+  
+        padding-top:5%; 
+        left:0;
+        right:0;
+       
+        text-transform: uppercase;
+        font-size:2vw;
+        
+       
+        font-weight: 700;
+        color: rgba(255,255,255,0.8);
+        line-height:4vh;
+        text-shadow: 0 0 6px rgba(255,255,255,0.92), 0 0 30px rgba(255,255,255,0.34), 0 0 12px rgba(67,165,190,0.52), 0 0 21px rgba(67,165,190,0.92), 0 0 34px rgba(67,165,190,0.78), 0 0 54px rgba(67,165,190,0.92);
+  
+    }
+    */
+    .fa-chevron-down{
+        top:80%!important;
+    }
+
+    h1{
+        margin-left:0!important;
+
+        margin-top:0.1em!important;
+        margin-bottom:-0.1em!important;
+        font-size: 3.6em !important;
+        font-weight:900 !important;
+        letter-spacing: -0.03em !important;      
+    }
+     .trait{   
+        margin-left:0!important;
+        height: 13px;
+        width: 35%;
+    }
+ 
+    .centered {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size:6em;
+        font-weight:800;
+        color:black
+      }
+ 
+
+    .title-part-1{
+        margin-left:-1.9% !important;
+    }
+
+    /* .figure1 {
+        z-index:200;
+        background: url('../images/cosmo_pyramids992.jpg') no-repeat top ;
+        background-size: cover;
+        width: 100%!important;
+        height: 100%!important;
+        bottom: 0%;
+        left: 0;
+        
+      }
+      
+      .figure2 {
+          z-index:300;
+        background: #CC1B49;
+        background: url('../images/logo-JG-white-opacity.svg');
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 40%;
+        height: 45%;
+        bottom: 35%;
+        left: 25%;
+      }
+      
+    
+      
+    .figure3  {
+        z-index:250 !important;
+      
+        background: url('../images/white-sunlight992.png') no-repeat center !important;
+        background-repeat: no-repeat;
+        bottom: 0%;
+        left: 0;
+        width: 92%;
+        height: 92%;
+      
+        background-size: cover;
+        opacity:0.7;
+       
+    }
+
+    */
+
+
+    
+    
+    .fa-angle-down{
+        z-index: 1000;
+        color:white;
+        margin-top:0vh;
+      }
+
+      .modal-open .container-fluid, .modal-open  .container {
+        -webkit-filter: blur(5px) grayscale(90%);
+        -moz-filter: blur(5px) grayscale(90%);
+        -o-filter: blur(5px) grayscale(90%);
+        -ms-filter: blur(5px) grayscale(90%);
+        filter: blur(5px) grayscale(90%);
+    }
+}
+
+/* // Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+
+ #content:after{
+  content:"Desktop Large Screen"
+ }
+    
+ 
+
+
+   .under-logo {
+    top:12vw;
+    left:0;
+    right:0;
+    width:100%;
+    height:100%;
+    opacity:0.3;
+    z-index:100 !important;
+}
+
+
+.logo-jg {
+    z-index:1000;
+    position:absolute;
+    padding-top:2%;
+    left:0;
+    right:0;
+    height:auto!important;
+
+ 
+  background: url('./assets/img/cosmo_pyramids1200.jpg') no-repeat top ;
+  background-size: cover;
+  
+
+}
+
+#logo-jg {
+    margin-top:28vh!important; 
+  width: 45%!important;
+  height: 45%!important;
+
+
+}
+
+    .phrase {      
+        padding-top:8vh;
+        font-size: 10vw;
+        font-weight: 100;
+        letter-spacing: 0.2vw;
+    }
+
+    .titre-principal {   
+        margin-top:-6vh; 
+        
+    }
+
+
+    .fa-chevron-down{
+        top:90%;
+    }
+
+    .nav-link:before , .active:before {
+        z-index:9999!important;
+        content : " ";
+        position: absolute;
+        left    : 25%; 
+        bottom  : 0px;
+        height  : 0px;
+        width   : 50%;  /* or 100px */
+    }
+    
+    .nav-link:before { 
+        border-bottom:3px solid transparent;
+      }
+    .active:before {
+        border-bottom:3px solid  var(--main-color);
+      }
+
+    .centered {
+          font-size:6.5em;
+    }
+
+    .dropdown:hover .dropdown-menu{
+        display:block;
+      }
+
+
+    h1{
+        margin-top:0.1em!important;   
+        font-size: 5em !important;
+        font-weight:900 !important;
+        letter-spacing: -0.03em !important;      
+    }
+  
+    .trait{
+    background-color: var(--main-color);
+    height: 20px;
+    width: 25%;
+    }
+    .title-part-1{
+    margin-left:-3.5% !important;
+    }
+    .parallax{  background-attachment: fixed !important;}
+}
+
+/* // Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {   
+
+
+  #content:after{
+    content:"Desktop Very Large Screen"
+   }
+
+    .background-picture{
+        background: url('./assets/img/cosmo_pyramids.jpg') no-repeat center ;
+        z-index: 0 !important;
+        background-size: cover;
+        top:-10vh;
+        width: 100%!important;
+        height: 109vh;
+    }
+    .logo {
+      margin-top:2vh!important;
+      left:20%;
+      right:20%;
+   
+      width: 60%!important;
+      height: 60vh;
+      opacity:100%;
+  }
+
+    /*.jumbotron{
+      margin-top:10%!important;
+    }*/
+    
+
+    .under-logo {
+      width:100%;
+      height:100vh!important;
+      z-index:8000 !important;
+      border:0px solid goldenrod;
+      opacity:0.4;
+    }
+
+    .phrase {   
+        padding-top:15vh; 
+        color: var(--main-color-01);
+        font-size:7vw;
+        width:100%;
+        font-weight: 100;
+        letter-spacing: 0;
+    }
+    .centered {
+        font-size:7em;
+    }
+      h1{
+        margin-top:0.1em!important;   
+        font-size: 5.4em !important;
+        font-weight:900 !important;
+        letter-spacing: -0.02em !important;      
+    }
+    .trait{
+        height: 21px;
+        width: 25%;
+    }
+
+    .title-part-1{
+        margin-left:-5% !important;
+    }
+    /*
+    .titre-principal {  
+       
+      margin-top:-5vh;   
+      font-size: 2vw;
+      padding-top:5%;
+      padding-bottom:7%;       
+  }
+  */
+    .fa-angle-down{
+        z-index: 1000;
+        color:white;
+        margin-top:-8vh;
+      }
+
+    /*   #top_apropos{
+          padding-top:50%!important;
+      }  */
+
+}
+
+/* // FIN DES MEDIASQUERIES */
+
+.contain {
+    position: relative;
+    text-align: center;
+    color: var(--main-color-01);
+  }
+
+ .title-part-2{
+     margin-top:-20px;
+     font-size:2.2em;
+     font-weight:800;
+     text-transform: uppercase;
+ }
+ .title-part-3{
+    margin-top:-22px;
+    font-size:1.6em;
+    font-weight:800;
+    text-transform: uppercase;
+}
+.title-part-4{
+    margin-top:-12px;
+    text-transform: uppercase;
+}
+
+.title-part-5{
+    text-transform: uppercase;
+    color:white;
+}
+
+a.btn.btn-outline-primary{
+    color:  var(--main-color)!important;
+    border:6px solid  rgba(67, 165, 190,0.7)!important;  
+}
+
+.btn-text{
+    margin-bottom:0!important;
+}
+
+.cv{ color:var(--main-color);}
+
+.logos{
+    width:100%;
+    height:auto;
+    max-width:128px;
+    max-height:128px;
+}
+
+.logos_H{
+    width:100%;
+    height:100%;
+    max-height:128px;
+}
+.layer{
+    width:100%!important;
+}
+/*.svg-container {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    padding-top:0.08em;
+    padding-bottom: 0;
+    vertical-align: top;
+    overflow: hidden;
+    }
+    */
+
+  a.dropdown-item:active{
+      background-color:rgba(67, 165, 190,0.2)!important;
+  }
+ a.waves-effect{
+    background-color:transparent!important;
+  }
+  .waves-light:active{
+    background-color:var(--main-color)!important;
+  }
+.navbar-text{
+    font-weight:600!important;
+    font-size: 1.2em !important; 
+    color:rgba(255,255,255,0.5)!important;
+}
+textarea {
+    resize: none!important;
+  }
+  span.input-group-text, .browser-default, .form-control, .custom-select:active .browser-default:active{
+    background-color:var(--main-color-02) !important;
+    background-color:var(--main-color) !important;
+    border:1px var(--main-color) solid !important;
+    color:var(--main-color-01) !important;
+    font-weight:100!important;
+    border:2px var(--main-color)solid !important;
+  }
+  span.input-group-text{padding-right:1px!important;}
+  ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color:var(--main-color-01) !important;
+    font-weight:100!important;
+    opacity: 1; /* Firefox */
+    border:0 var(--main-color)solid !important;
+  }
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color:var(--main-color-01) !important;
+    border:0 var(--main-color)solid !important;
+  }
+  ::-ms-input-placeholder { /* Microsoft Edge */
+    color:var(--main-color-01) !important;
+    border:0 var(--main-color)solid !important;
+  }
+ /*Customisation checkbox*/
+  .custom-checkbox .custom-control-input:checked ~ .custom-control-label::before {
+    background-color: var(--main-color)!important;
+  }
+  .custom-checkbox .custom-control-input:focus ~ .custom-control-label::before {
+    box-shadow: 0 0 0 1px #212121, 0 0 0 0.2rem rgba(0, 0, 0, 0.25)!important;
+  }
+  .custom-checkbox .custom-control-input:active ~ .custom-control-label::before {
+    background-color: #212121!important;
+  }
+  .custom-control-label::before{
+        background-color: #212121!important;
+        border:2px rgba(255, 255, 255,0.7) solid !important;
+        border-radius: 2px!important;
+  }
+
+  #logo-jg {
+    opacity:0.9;
+  }
+

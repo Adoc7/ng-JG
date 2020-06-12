@@ -1,0 +1,11 @@
+
+
+.nothing{
+    background-color:transparent!important;
+}
+
+.about,.portfolios,.technologies,.parcours,.contacts{
+    background-color:rgba(67, 165, 190,0.8)!important;
+    /* border-bottom:3px solid red!important; */
+}
+

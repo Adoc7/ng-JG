@@ -1,0 +1,61 @@
+<nav class="px-lg-4 px-xl-5 navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar">
+    <a class="px-xl-5 navbar-brand js-scrollTo" 
+        (click)="toHome()"
+       > <img src='./assets/img/logo-JG-w.svg' alt="Logo JG" style='opacity:1; max-width:60px;'/>
+    </a>
+        
+    <button class="navbar-toggler" type="button" 
+            data-toggle="collapse" data-target="#navbarSupportedContent" 
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <div id="hexag-menu-top"></div>
+            <div id="hexag-menu-middle">
+                <span> </span>
+                <span> </span>
+                <span> </span>
+            </div>
+            <div id="hexag-menu-bottom"></div>  
+    </button>
+    <div class="collapse navbar-collapse pr-lg-2 pr-xl-3" id="navbarSupportedContent">
+        <ul class=" navbar-nav mr-auto">
+          
+          
+            <li class="nav-item">
+                <a class="nav-link" [ngClass]="{'about':about, 'nothing':nothing}" (click)="toAbout()"><i class="fa fa-user-circle"></i> à propos</a>         
+            </li>
+        
+            <div class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" [ngClass]="{'portfolios':portfolios, 'nothing':nothing}" (click)="toDev()" data-toggle="dropdown"><i class="fas fa-book-open"></i> portfolios </a>
+                
+                   <div class="dropdown-menu">     
+                       <a class="dropdown-item" (click)="toDev()"><i class="fas fa-code"></i> développement</a>
+                       <a class="dropdown-item" (click)="toInfographic()"><i class="fab fa-adobe"></i> INFOGRAPHIE</a>
+                       <a class="dropdown-item" (click)="toDraw()"><i class="fas fa-pencil-alt"></i> DESSINS</a>
+                   </div>      
+                </div>
+
+            <div class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" [ngClass]="{'technologies':technologies, 'nothing':nothing}" (click)="toGraphic()" data-toggle="dropdown" ><i class="fas fa-cog"></i>technologies</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" (click)="toGraphic()"><i class="fab fa-adobe"></i> graphisme</a>
+                        <a class="dropdown-item" (click)="toDevF()"><i class="fas fa-code"></i> dév front-end</a>
+                        <a class="dropdown-item" (click)="toDevB()"><i class="fab fa-symfony"></i> dév back-end</a>
+                    </div>
+                </div>
+
+                <li class="nav-item">
+                    <a class="nav-link" [ngClass]="{'parcours':parcours, 'nothing':nothing}" (click)="toCourse()"><i class="fas fa-briefcase"></i> parcours</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link js-scrollTo" [ngClass]="{'contacts':contacts, 'nothing':nothing}"  href="#contacts" target="_self" (click)="toContacts()"><i class="fas fa-comments"></i> contacts</a>
+                </li>              
+            
+        </ul>
+        <span class="navbar-text align-top d-none d-lg-block">
+            
+           <i class="fas fa-phone flip_H "></i> 06 83 59 81 21             
+        </span> 
+    </div>
+</nav>
+
+
+

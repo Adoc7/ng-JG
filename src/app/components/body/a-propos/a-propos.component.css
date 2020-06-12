@@ -1,0 +1,12 @@
+h1{
+    margin-top:0.1em!important;
+    font-weight:900!important;
+    font-size:5em!important; 
+    letter-spacing: -0.08em !important;  
+  }
+
+  img{
+    max-width:24px;
+    height:auto;
+    vertical-align:middle; 
+  }
